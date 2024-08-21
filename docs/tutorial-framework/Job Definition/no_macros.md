@@ -11,7 +11,7 @@ To define a job without macros we use the `new_job` method of the framework whic
 - a string containing the cron expression
 - a string containing the timeout
 
-Passing the job's code can either be done by useing the identifier of an existing function... 
+Passing the job's code can either be done by using the identifier of an existing function... 
 
 ```rust
 fn my_no_macro_job(){
@@ -40,5 +40,7 @@ fn main(){
 
 You might ask what type a job defined this way is, and the answer to that is: a global cron job.
 
+:::info
 Job definition without macros is not the focus of the framework, at least for the moment.
+:::
 

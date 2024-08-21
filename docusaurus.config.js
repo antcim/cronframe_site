@@ -24,7 +24,7 @@ const config = {
   projectName: 'cronframe_site', // Usually your repo name.
 
   trailingSlash: false,
-  
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -33,7 +33,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'it'],
+    locales: ['en'],
   },
 
   presets: [
@@ -43,26 +43,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: false,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -91,13 +73,19 @@ const config = {
             type: 'docsVersionDropdown',
             position: 'right'
           },
-          {
-            type: 'localeDropdown',
-            position: 'right'
-          },
+          // comment out this when localization will be available
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right'
+          // },
           {
             href: 'https://github.com/antcim/cronframe',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            label: 'crates.io',
+            href: 'https://crates.io/crates/cronframe',
             position: 'right',
           },
         ],
@@ -130,13 +118,17 @@ const config = {
                 href: 'https://github.com/antcim/cronframe',
               },
               {
+                label: 'crates.io',
+                href: 'https://crates.io/crates/cronframe',
+              },
+              {
                 label: 'Icons',
                 href: 'https://www.flaticon.com/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} CronFrame, Built with Docusaurus.`,
+        copyright: `Built with Docusaurus`,
       },
       prism: {
         theme: prismThemes.github,

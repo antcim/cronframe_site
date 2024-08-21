@@ -35,7 +35,9 @@ The default function inits the framework with the default logger configuration a
 
 Please refer to the CronFrame instance page of the tutorial to learn more about it.
 
+:::info
 If it is not specified otherwise in a cronframe.toml file, the web server will be running at http://127.0.0.1:8098.
+:::
 
 At this point we need to start the scheduler and decided what to do to keep main alive.
 
@@ -66,3 +68,7 @@ fn main(){
     // .run() is equivalent to .start_scheduler().keep_alive()
 }
 ```
+
+:::info Dropping Global Jobs
+There is not mechanism for dropping global jobs as of yet, they can however be suspended from scheduling from their page on the web server.
+:::
