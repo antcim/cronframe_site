@@ -50,3 +50,12 @@ Options:
   -h, --help          Print help
   -V, --version       Print version
 ```
+
+:::info
+Create a job_list.txt file inside the .cronframe directory under the user directory for the load command to read jobs from there.
+```txt
+// example of job_list.txt
+0 0/5 * * * * 0 path/to/my_job_in_a_file.rs
+0 0/5 9-10 * * * 0 path/to/my_job_in_a_crate.rs 
+```
+:::
